@@ -338,9 +338,9 @@ static int is_stack(struct vm_area_struct *vma)
 		vma->vm_end >= vma->vm_mm->start_stack;
 }
 
-+#ifdef CONFIG_KSU_SUSFS_SUS_KSTAT
-+#include <linux/susfs_def.h>
-+#endif
+#ifdef CONFIG_KSU_SUSFS_SUS_KSTAT
+#include <linux/susfs_def.h>
+#endif
 
 #define print_vma_hex10(out, val, clz_fn) \
 ({									\
